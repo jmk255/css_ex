@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>overflow속성</title>
+  <style>
+    div{
+      width:1000px;
+      font-size:2em;/*em = 배수*/
+      border:10px solid red;
+      margin:auto;
+      /*white-space속성(기본값 = wrap)*/
+      white-space:nowrap;/*줄바꿈 금지*/
+      overflow:hidden;/*컨텐츠가 넘치면 가려줌*/
+      text-overflow:ellipsis;/*글이 넘치면 ...으로 표시*/
+    }
+  </style>
+</head>
+<body>
+  <div>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo laboriosam inventore tempore hic voluptatum? Quam libero quo quaerat maiores cupiditate, magni molestias expedita, exercitationem cumque, dolor ratione nulla reprehenderit? Vitae.
+  </div>
+</body>
+</html>
