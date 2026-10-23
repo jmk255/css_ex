@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>background-attachment</title>
+  <style>
+    section{
+      outline:1px solid red;
+      width:90%;/*부모요소를 기준으로 90%크기로 넓이를 설정*/
+      /*vh(viewport height) & vw(viewport width) = 브라우저 높이와 넓이의 %로 설정되는 단위*/
+      height:90vh;
+      /*블럭요소의 가운데 정렬 = margin:auto;*/
+      margin:4vh auto;
+    }
+
+    section > article{
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;/*반복 배경없음*/
+      background-position: center;/*배경이미지 가운데 정렬*/
+      /*기본값: 내용과 같이 배경이미지도 스크롤 됨*/
+      background-attachment: scroll;
+      /*배경 이미지 고정*/
+      background-attachment: fixed;
+    }
+    section > article:first-child{
+      background-image:url(images/car1.jpg);
+    }
+    section > article:last-child{
+      background-image:url(images/car2.jpg);
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <article></article>
+    <article></article>
+  </section>
+</body>
+</html>
