@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>화면분할</title>
+  <style>
+    section{
+      border:10px solid red;
+      width:500px;
+      position:relative;/*pos:abs를 적용한 자식요소의 기준이됨*/
+    }
+    section > div{
+      font-size:32px;
+      background-color:gold;
+      position:absolute;
+    }
+    img{display:block;}/*이미지요소 하단여백을 제거*/
+
+    section > div:nth-child(2){
+      background-color:green;
+      top:0;
+      bottom:50%;
+      left:0;
+      right:50%;
+    }
+    section > div:nth-child(3){
+      top:50%;
+      bottom:0;
+      left:50%;
+      right:0;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <img src="https://github.com/jmk255/source/blob/main/color.png?raw=true" alt="">
+    <div>티셔츠</div>
+    <div>티셔츠1</div>
+  </section>
+</body>
+
+</html>

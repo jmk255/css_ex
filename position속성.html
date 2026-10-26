@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>position속성</title>
+  <style>
+    .parent{
+      width:100%;
+      background-color:#ccc;
+      position:relative;/*pos:abs를 적용한 요소의 기준이 됩니다*/
+    }
+    .child{
+      width:200px;
+      height:200px;
+      background-color:orange;
+      position:static;/*블럭요소가 기본적으로 가지고 있는 포지션값*/
+    }
+    .ch1{
+      background-color:#fc0;
+      position:relative;/*공간을 차지한 상태로 부유합니다(위치속성을 적용할수 있습니다.top, left, bottom, right)*/
+      top:100px;
+      left:100px;
+    }
+    .ch2{
+      background-color:#f70;
+      position:absolute;/*공간이 생성되지 않은 상태로 요소를 부유시킵니다*/
+      /*기본적으로 브라우저기준으로 위치가 배치됩니다(절대값)*/
+      right:100px;
+      bottom:100px;
+      z-index: 9999;/*z축으로 값이 크면 위로 작으면 아래로 배치*/
+    }
+    .ch3{
+      background-color:#f00;
+      position:absolute;
+      right:100px;
+      bottom:200px;
+      z-index: 9998;
+    }
+  </style>
+</head>
+<body>
+  <h1>position속성 : 위치속성</h1>
+  <div class="parent">
+    <div class="child ch1">Box1</div>
+    <div class="child ch2">Box2</div>
+    <div class="child ch3">Box3</div>
+  </div>
+</body>
+</html>

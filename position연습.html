@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>position연습</title>
+  <style>
+    @import url(css/reset.css);
+    .hero{
+      width:100%;
+      min-width:1000px;
+      height:800px;
+      background:url(images/bg.png) center/cover no-repeat;
+      position:relative;/*pos:abs를 적용한 자식요소의 기준이됨*/
+      /*자식요소들을 가운데 정렬하기 위해 사용*/
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .hero > .logo{
+      text-align: center;
+    }
+    .hero > .logo > img{
+      margin-bottom:40px;
+    }
+    .hero > .logo > h2{
+      font-size:18px;
+      color:#fff;
+      line-height:1.8em;
+    }
+
+    .hero > nav{
+      position:absolute;
+      bottom:0;
+      left:0; right:0;
+      background-color:rgba(51,26,81,0.9);
+      padding:20px 0;
+      text-align: center;
+    }
+    nav > .container{
+      width:1000px;
+      margin:auto;
+    }
+    nav > .container > a{
+      color:#fff;
+      font-size:15px;
+      font-weight: bold;
+      margin:0 50px;
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="logo">
+      <img src="images/logo_lg.png" alt="logo">
+      <h2>
+        Lorem ipsum dolor sit<br> 
+        amet consectetur adipisicing elit.
+      </h2>
+    </div>
+    <nav>
+      <div class="container">
+        <a href="#">about</a>
+        <a href="#">news</a>
+        <a href="#">portfolio</a>
+        <a href="#">board</a>
+        <a href="#">album</a>
+        <a href="#">contact</a>
+      </div>
+    </nav>
+  </section>
+</body>
+</html>
