@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>레이아웃연습1</title>
+  <!--폰트어썸-->
+  <script src="https://kit.fontawesome.com/b197bbc13c.js" crossorigin="anonymous"></script>
+  <style>
+    @import url(css/reset.css);
+
+    .card{
+      width:1080px;
+      margin:40px auto;
+    }
+    article{
+      width:250px;
+      height:240px;
+      float:left;
+      margin:0 10px;
+      position:relative;/*pos:abs를 적용한 자식요소의 기준이 됨*/
+    }
+    article > .txt{
+      position:absolute;
+      inset:0;
+      background-color:rgba(0,0,0,0.4);
+      color:#fff;
+      padding:40px 20px;
+      display:none;
+    }
+    /*article에 마우스를 올리면 .txt가 나타남*/
+    article:hover > .txt{
+      display:block;
+    }
+
+    .txt > h2{
+      font-size:24px;
+      line-height:40px;
+    }
+    .txt > p{
+      font-size:14px;
+      line-height:20px;
+    }
+    .icon{
+      margin-top:20px;
+    }
+    .icon > a{
+      color:#fff;
+      font-size:20px;
+    }
+
+
+  </style>
+</head>
+<body>
+  <section class="card clear">
+    <article>
+      <img src="images/1.jpg" alt="">
+      <div class="txt">
+        <h2>subject title</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, modi?</p>
+        <div class="icon">
+          <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+        </div>
+      </div>
+    </article>
+    <article>
+      <img src="images/2.jpg" alt="">
+      <div class="txt">
+        <h2>subject title</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, modi?</p>
+        <div class="icon">
+          <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+        </div>
+      </div>
+    </article>
+    <article>
+      <img src="images/3.jpg" alt="">
+      <div class="txt">
+        <h2>subject title</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, modi?</p>
+        <div class="icon">
+          <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+        </div>
+      </div>
+    </article>
+    <article>
+      <img src="images/4.jpg" alt="">
+      <div class="txt">
+        <h2>subject title</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, modi?</p>
+        <div class="icon">
+          <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+        </div>
+      </div>
+    </article>
+  </section>
+</body>
+</html>

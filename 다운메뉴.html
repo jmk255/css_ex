@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>다운메뉴</title>
+  <style>
+    @import url(css/reset.css);
+    .down-menu{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .down-menu > li{
+      position:relative;/*pos:abs를 적용한 자식요소의 기준이 됨*/
+    }
+    .down-menu > li > a{
+      display:block;
+      width:150px;
+      height:40px;
+      line-height:40px;
+      text-align: center;
+      background-color:#ccc;
+      color:#111;
+    }
+
+    .sub-menu{
+      position:absolute;
+      width:100%;
+      background-color:#ccc;
+      text-align: center;
+      display:none;
+    }
+    /*.down-menu > li에 마우스를 올리면 .sub-menu가 나타남*/
+    .down-menu > li:hover > .sub-menu{
+      display:block;
+    }
+    .sub-menu a{
+      display:block;
+      line-height:40px;
+      color:#333;
+      font-size:14px;
+    }
+
+    /*hover효과*/
+    .down-menu > li:hover > a{
+      background-color:tomato;
+      color:#fff;
+    }
+    .sub-menu a:hover{
+      background-color:burlywood;
+      color:#fff;
+    }
+  </style>
+</head>
+<body>
+  <ul class="down-menu">
+    <li>
+      <a href="#">MENU</a>
+      <ul class="sub-menu">
+        <li><a href="#">SUBMENU</a></li>
+        <li><a href="#">SUBMENU</a></li>
+        <li><a href="#">SUBMENU</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">MENU</a>
+      <ul class="sub-menu">
+        <li><a href="#">SUBMENU</a></li>
+        <li><a href="#">SUBMENU</a></li>
+      </ul>
+    </li>
+  </ul>
+</body>
+</html>
