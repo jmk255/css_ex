@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>내비연습3</title>
+  <style>
+    @import url(css/reset.css);
+
+    /*commons*/
+    .container{
+      width:1080px;
+      margin:auto;
+      display:flex;
+      align-items: center;/*교차축 정렬*/
+      padding:0 40px;
+    }
+
+    header > .top-nav{
+      width:100%;
+      min-width:1080px;
+      background-color:#333;
+    }
+    .top-nav > .container{
+      justify-content: flex-end;/*주축 정렬*/
+      height:40px;
+    }
+    .top-nav .login{
+      display:flex;
+      gap:40px;
+    }
+    .login a{
+      color:#fff;
+      font-size:15px;
+    }
+
+    .bottom-nav{
+      width:100%;
+      min-width:1080px;
+      background-color:orangered;
+    }
+    .bottom-nav > .container{
+      height:80px;
+      justify-content: space-between;
+    }
+    .bottom-nav .logo a{
+      font-size:20px;
+      color:#fff;
+      font-weight: bold;
+    }
+    .bottom-nav .gnb{
+      display:flex;
+      gap:45px;
+      font-size:18px;
+    }
+    .gnb a{color:#fff;}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top-nav">
+      <div class="container">
+        <ul class="login">
+          <li><a href="#">login</a></li>
+          <li><a href="#">join us</a></li>
+          <li><a href="#">number</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom-nav">
+      <div class="container">
+        <div class="logo">
+          <a href="#">LOGO</a>
+        </div>
+        <ul class="gnb">
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">NEWS</a></li>
+          <li><a href="#">PORTFOLIO</a></li>
+          <li><a href="#">BOARD</a></li>
+          <li><a href="#">ALBUM</a></li>
+          <li><a href="#">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+</body>
+</html>
