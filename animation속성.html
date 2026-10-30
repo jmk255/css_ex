@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>animation속성</title>
+  <style>
+    .box{
+      width:100px; height:100px;
+      background-color:red;
+      /*name(이름), duration(실행시간), delay(지연시간), iteration-count(반복횟수), direction(방향), timing-function(가감속)*/
+      animation:example 5s 2s infinite alternate linear;
+    }
+
+    @keyframes example {
+      /* from{background-color:red;}
+      to{background-color:blue;} */
+      0%{background-color:red; translate:0 0;}
+      25%{background-color:yellow; translate:200px 0;}
+      50%{background-color:blue; translate:200px 200px;}
+      75%{background-color:green; translate:0px 200px;}
+      100%{background-color:red; translate:0px 0;}
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>

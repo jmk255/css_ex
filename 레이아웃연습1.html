@@ -19,6 +19,7 @@
       float:left;
       margin:0 10px;
       position:relative;/*pos:abs를 적용한 자식요소의 기준이 됨*/
+      overflow:hidden;/*자식(후손)요소가 밖으로 넘어가면 가려줍니다*/
     }
     article > .txt{
       position:absolute;
@@ -26,11 +27,20 @@
       background-color:rgba(0,0,0,0.4);
       color:#fff;
       padding:40px 20px;
-      display:none;
+      /* opacity:0;
+      visibility: hidden;
+      rotate:-720deg;
+      scale:0; */
+      translate:0 100%;/*높이의 100%만큼 밑으로 이동*/
+      transition: .5s;
     }
     /*article에 마우스를 올리면 .txt가 나타남*/
     article:hover > .txt{
-      display:block;
+      opacity:1;
+      visibility: visible;
+      rotate:0deg;
+      scale:1;
+      translate:0;
     }
 
     .txt > h2{

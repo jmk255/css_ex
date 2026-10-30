@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>고정메뉴만들기</title>
+  <link href="https://unpkg.com/ress/dist/ress.min.css" rel="stylesheet">
+  <style>
+    html, body{
+      /*부드러운 스크롤 이동*/
+      scroll-behavior:smooth;
+    }
+
+    header, section, footer{
+      width:1000px;
+      height:900px;
+      margin:auto;
+    }
+    header{background-color:yellow;}
+    section{background-color:lightgreen;}
+    footer{background-color:skyblue;}
+
+    .fixed_menu{
+      width:80px;
+      background-color:#fff;
+      text-align: center;
+      font-size:14px;
+      border:1px solid #999;
+      position:fixed;
+      top:100px;
+      left:50%;
+      margin-left:500px;
+    }
+    .fixed_menu > .title{
+      width:100%;
+      height:80px;
+      padding:20px;
+      background-color:#e4574d;
+      color:#fff;
+      font-weight: bold;
+    }
+    ul{list-style:none;}
+    .btn > li > a{
+      display:block;
+      width:100%;
+      height:60px;
+      padding:20px 0;
+      color:#333;
+      text-decoration: none;
+      border-bottom:1px solid #999;
+    }
+    /*마지막 버튼 요소의 밑줄을 제거*/
+    .btn > li:last-child > a{
+      border-bottom:none;
+    }
+    .top_btn{
+      width:100%;
+      height:60px;
+      background-color:#e4574d;
+      color:#fff;
+      font-weight: bold;
+    }
+    /*뷰포트의 넓이가 1200px 이하일 경우 적용되는 스타일*/
+    @media screen and (max-width:1200px) {
+      .fixed_menu{
+        left:auto;
+        right:0;
+        margin-left:0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="fixed_menu">
+    <div class="title">
+      Quick<br>
+      MENU
+    </div>
+    <ul class="btn">
+      <li><a href="#header">헤더</a></li>
+      <li><a href="#section">섹션</a></li>
+      <li><a href="#footer">푸터</a></li>
+      <li><a href="#">MENU</a></li>
+    </ul>
+    <button class="top_btn" type="button">TOP</button>
+  </div>
+  <header id="header"></header>
+  <section id="section"></section>
+  <footer id="footer"></footer>
+</body>
+</html>

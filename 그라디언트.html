@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>그라디언트활용</title>
+  <style>
+    .box{
+      outline:1px solid red;
+      width:400px;
+      height:300px;
+      position:relative;
+      overflow:hidden;
+    }
+    .spin{
+      width:500px;
+      height:500px;
+      /*linear-gradient(각도, 색상 위치, 색상 위치, ...)*/
+      background:linear-gradient(0deg, #dc2424 0%, #4a569d 100%);
+      position:absolute;
+      /*pos:abs 적용시 가운데 정렬 방법*/
+      left:50%; top: 50%;
+      translate:-50% -50%;
+      animation:spin 4s linear infinite;
+    }
+    @keyframes spin {
+      100%{rotate:360deg;}
+    }
+    
+    .logo{
+      position:absolute;
+      left:50%; top: 50%;
+      translate:-50% -50%;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="spin"></div>
+    <img class="logo" src="images/logo_lg.png" alt="">
+  </div>
+</body>
+</html>

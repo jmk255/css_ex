@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가로로 흐르는 글자</title>
+  <style>
+    *{margin:0; padding:0; box-sizing: border-box;}
+    .flow_banner{
+      width:100%;
+      background:black;
+      position:relative;
+      overflow:hidden;
+      color:#fff;
+    }
+    .flow_inner{
+      width:200%;
+      display:flex;
+    }
+    .flow_banner .list{
+      list-style: none;
+      width:50%;
+      display:flex;
+      padding:20px 0;
+    }
+    .flow_banner .list li{
+      flex:1;/*모든 li요소의 넓이가 같은 비율로 설정*/
+      text-align: center;
+      font-size:18px;
+      white-space: nowrap;/*줄바꿈 금지*/
+      transition:0.3s;/*변환효과*/
+    }
+    .flow_banner .list li:hover{
+      scale:1.2;
+      cursor:default;
+    }
+    .flow_banner .list:nth-child(1){
+      animation:rolling1 40s linear infinite;
+    }
+    .flow_banner .list:nth-child(2){
+      animation:rolling2 40s linear infinite;
+    }
+
+    @keyframes rolling1 {
+      0%{translate:0;}
+      50%{translate:-100%;}
+      50.0001%{translate:100%;}
+      100%{translate:0;}
+    }
+    @keyframes rolling2 {
+      0%{translate:0;}
+      100%{translate:-200%;}
+    }
+  </style>
+</head>
+<body>
+  <div class="flow_banner">
+    <div class="flow_inner">
+      <ul class="list">
+        <li>TEXT1</li>
+        <li>TEXT2</li>
+        <li>TEXT3</li>
+        <li>TEXT4</li>
+        <li>TEXT5</li>
+      </ul>
+      <ul class="list">
+        <li>TEXT1</li>
+        <li>TEXT2</li>
+        <li>TEXT3</li>
+        <li>TEXT4</li>
+        <li>TEXT5</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

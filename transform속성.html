@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>transform속성</title>
+  <style>
+    .box{
+      width:100px;
+      height:100px;
+      background-color:skyblue;
+      /*transform속성*/
+      /*
+      transform:translate(x, y축 위치값) scale(배수) rotate(각도:deg) skew(각도:deg);
+      */
+      /* transform:translateX(100px); */
+      translate:100px 100px;/*위치를 이동하는 속성*/
+      scale:1.5;/*크기를 변경하는 속성*/
+      rotate:45deg;/*회전*/
+      transform:skewY(45deg);/*기울기*/
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>

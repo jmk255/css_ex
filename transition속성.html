@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>transition속성</title>
+  <style>
+    .box{
+      height:100px;
+      background-color:#afafaf;
+      opacity: 0.3;
+      /*.box에 변환효과를 적용(배경색이 변경되면 0.5초에 걸쳐 변경됨)*/
+      transition:background-color 0.5s;
+      width:100%;
+    }
+    .box:hover{
+      background-color:gold;
+      transition:background-color 2s;
+      width:50%;
+      transition:background-color 2s, width 2s;
+      opacity:1;
+      /*속성값을 안넣으면 모든 속성에 변환효과가 적용된다*/
+      transition: 2s;
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+  <hr>
+  <div class="box"></div>
+</body>
+</html>

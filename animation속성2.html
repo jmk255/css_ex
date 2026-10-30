@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>animation속성2</title>
+  <style>
+    .box{
+      width:100px;
+      height:100px;
+      background-color:red;
+      animation:scale 5s linear;
+      /*애니메이션이 종료된 후 마지막 프레임으로 정의된 값을 적용(forwards)할지,
+      첫번째 프레임으로 정의된 값을 적용(backwards)할지 설정하는 속성*/
+      animation-fill-mode:forwards;
+    }
+    .box:hover{
+      animation-play-state:paused;/*일시정지*/
+    }
+    @keyframes scale {
+      0%{width:100px; height:100px}
+      100%{width:500px; height:500px}
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>
